@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Phishing Detector",
+  "description": "Detects Phishing messages in Gmail and allows user to delete or archive them.",
+  "version": "1.0",
+  "permissions": ["identity", "identity.email", "storage"],
+  "background": {
+    "service_worker": "./js/background.js"
+  },
+  "action": {
+    "default_popup": "./html/popup.html",
+    "default_icon": {
+      "16": "icons/16x16.png",
+      "32": "icons/32x32.png",
+      "48": "icons/48x48.png",  
+      "128": "icons/128x128.png"
+    }
+  },
+  "oauth2": {
+    "client_id": "493290698580-jfn58i6ctsf9904g9chf7d7c3momrsl8.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.modify"
+    ]
+  }
+}
